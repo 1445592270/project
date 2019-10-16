@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block label %}
+    任务发布
+{% endblock %}
+{% block content %}
+    <form action="" method="post">
+    {##}
+    {#    <p>#}
+    {#        {{ task.name.label }}:#}
+    {#        {{ task.name }}#}
+    {#    </p>#}
+    {#    <p>#}
+    {#    {{ task.description.label }}:#}
+    {#        {{ task.description }}#}
+    {#    </p>#}
+    {#    <p>#}
+    {#    {{ task.time.label }}:#}
+    {#        {{ task.time }}#}
+    {#    </p>#}
+    {#    <p>#}
+    {#    {{ task.public.label }}:#}
+    {#        {{ task.public }}#}
+    {#    </p>#}
+
+
+    {#    <p>#}
+    {#        {{ task.name }}#}
+    {#    </p>#}
+    {#    <p>#}
+    {#        {{ task.description }}#}
+    {#    </p>#}
+    {#    <p>#}
+    {#        {{ task.time }}#}
+    {#    </p>#}
+    {#    <p>#}
+    {#        {{ task.public }}#}
+    {#    </p>#}
+
+    {% for i in task %}
+    <p>
+        {{ i }}
+    </p>
+    {% endfor %}
+    <input type="submit" value="提交" class="btn btn-google btn-block">
+</form>
+    <p style="color: red">
+    {% for key,val in error.items() %}
+        {{ key }}:{{ val }}
+    {% endfor %}
+
+    </p>
+{% endblock %}

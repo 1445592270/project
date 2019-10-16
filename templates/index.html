@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}
+    首页
+{% endblock %}
+{% block label %}
+    <h2>saber</h2>
+    <img src="/static/img/ww1.jpeg" style="width: 100%;height: 100%" alt="my favorite" title="my favorite">
+{% endblock %}
+
+{% block content %}
+    {% for i in data %}
+    {{ i.name }}<br>
+    {{ i.age }}<br>
+    {% endfor %}
+{% endblock %}
